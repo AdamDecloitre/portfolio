@@ -11,3 +11,7 @@ main section ul li {
     display: inline-block;
     list-style: none;
 }
+
+main section {
+    text-align: center;
+}

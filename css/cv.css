@@ -1,0 +1,81 @@
+#cv-config {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.parcours-item {
+    margin-bottom: 15px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-left: 4px solid #007bff;
+    border-radius: 8px;
+}
+
+.parcours-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+.parcours-item p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.compet-item {
+    margin-bottom: 15px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-left: 4px solid #ff0000;
+    border-radius: 8px;
+}
+
+.compet-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #ff0000;
+}
+
+.compet-item p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.lang-item {
+    margin-bottom: 15px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-left: 4px solid #11821e;
+    border-radius: 8px;
+}
+
+.lang-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #11821e;
+}
+
+.lang-item p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.inter-item {
+    margin-bottom: 15px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-left: 4px solid #8c2893;
+    border-radius: 8px;
+}
+
+.inter-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #8c2893;
+}
+
+.inter-item p {
+    margin: 5px 0;
+    color: #555;
+}
