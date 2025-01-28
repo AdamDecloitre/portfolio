@@ -92,5 +92,16 @@ figure figcaption {
 
 footer {
     background-color: black;
-    color: white;
+    padding-top: 10px;
+    margin: 20px;
+    font-family: STJEDISE;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 10%;
+    color: #f9fd00;
+    text-decoration: none;
+}
+
+footer a {
+    color: #f9fd00
 }
