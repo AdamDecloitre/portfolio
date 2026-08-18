@@ -44,6 +44,10 @@ body{
 .btn{display:inline-block;padding:var(--space-sm) var(--space-md);border-radius:calc(var(--radius) - 2px);background:#0ea5a4;color:#fff;text-decoration:none;font-weight:700;margin-right:10px;box-shadow:0 6px 20px rgba(14,165,164,0.12)}
 .btn.secondary{background:transparent;color:#0f172a;border:1px solid rgba(15,23,42,0.06)}
 
+/* Smaller variant for secondary CTAs like 'CV' */
+.btn.small{padding:6px 10px;font-size:0.9rem;border-radius:8px}
+.site-header nav a.small{padding:6px 8px}
+
 /* Content */
 main{padding-bottom:var(--space-lg)}
 h1,h2,h3{margin:0 0 calc(var(--space-sm)) 0}
