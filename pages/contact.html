@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Contact — Adam Decloitre</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container">
+			<h1>Contact</h1>
+			<nav>
+				<ul>
+					<li><a href="../index.html">Accueil</a></li>
+					<li><a href="sites.html">Sites</a></li>
+					<li><a href="cv.html">CV</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="container">
+		<section class="section">
+			<h2>Me contacter</h2>
+			<div class="card form-card">
+				<p class="lead">Remplissez le formulaire ci-dessous pour m'envoyer un message. Le formulaire utilise <strong>formsubmit.co</strong> pour transmettre le mail vers <a href="mailto:adam.decloitre62@gmail.com">adam.decloitre62@gmail.com</a>. (La première soumission demandera une confirmation par e‑mail.)</p>
+				<form class="form-grid" action="https://formsubmit.co/adam.decloitre62@gmail.com" method="POST">
+					<!-- Disable formsubmit's captcha -->
+					<input type="hidden" name="_captcha" value="false">
+					<!-- Optional: set a subject shown in email -->
+					<input type="hidden" name="_subject" value="Nouveau message portfolio">
+					<div class="form-group">
+						<label for="name">Votre nom</label>
+						<input id="name" name="name" type="text" required>
+					</div>
+					<div class="form-group">
+						<label for="email">Votre e‑mail</label>
+						<input id="email" name="email" type="email" required>
+					</div>
+					<div class="form-group">
+						<label for="subject">Objet</label>
+						<input id="subject" name="subject" type="text">
+					</div>
+					<div class="form-group">
+						<label for="message">Message</label>
+						<textarea id="message" name="message" required></textarea>
+					</div>
+					<div class="form-actions">
+						<button class="btn primary" type="submit">Envoyer</button>
+						<p class="form-note">Je réponds généralement sous 48 heures.</p>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">
+			<p>© 2026 Adam Decloitre. <a href="https://www.linkedin.com/in/adam-decloitre-419a52348/">LinkedIn</a>
+				<a href="https://github.com/AdamDecloitre">GitHub</a></p>
+		</div>
+	</footer>
+</body>
+</html>

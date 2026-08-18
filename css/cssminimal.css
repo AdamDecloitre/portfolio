@@ -1,0 +1,42 @@
+/* Minimal theme: clean, typographic, neutral */
+:root{--min-bg:#ffffff;--min-text:#0f172a;--min-muted:#6b7280;--min-accent:#2563eb}
+.site, body{background:var(--min-bg);color:var(--min-text)}
+/* header */
+.site-header{background:transparent;padding:var(--space-sm) 0}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.site-header h1{font-size:18px;margin:0;font-weight:700}
+.site-header nav a{color:var(--min-text);padding:6px 10px;border-radius:6px}
+.site-header nav a:hover{background:#f1f5f9}
+
+.hero-section{padding:var(--space-xl);background:linear-gradient(180deg,#ffffff, #fbfdff);border-radius:10px}
+.hero-section .lead{max-width:720px}
+.container{max-width:1000px;margin:0 auto;padding:var(--space-lg)}
+.container h2{font-size:1.6rem;margin-bottom:calc(var(--space-sm))}
+.container p{color:var(--min-muted);line-height:1.6}
+
+.section{margin-block:var(--space-lg)}
+
+/* footer style for minimal theme */
+footer.site-footer{background:transparent;padding:var(--space-sm) 0;color:var(--min-muted)}
+
+/* simple list / links */
+ul{margin:var(--space-xs) 0 0 1.2rem}
+li{margin-bottom:var(--space-xs)}
+a{color:var(--min-accent)}
+
+
+/* Button */
+.btn{display:inline-block;padding:var(--space-sm) var(--space-md);border-radius:10px;background:var(--min-accent);color:#fff;font-weight:700;text-decoration:none}
+
+/* small responsive */
+@media(max-width:900px){.container{padding:var(--space-md)}}
+@media(max-width:700px){.site-header .container{flex-direction:column;align-items:flex-start}}
+
+/* Projects grid */
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-md);margin-top:var(--space-sm)}
+.project-card{background:#ffffff;border:1px solid #eef2f7;padding:var(--space-md);border-radius:10px;transition:transform .18s ease,box-shadow .18s ease}
+.project-card:hover{transform:translateY(-6px);box-shadow:0 8px 30px rgba(16,24,40,0.06)}
+.lead{font-size:1.05rem;color:#334155}
+.contact{margin-top:var(--space-md)}
+@media(max-width:900px){.projects-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.projects-grid{grid-template-columns:1fr}}

@@ -1,107 +1,192 @@
-@font-face {
-    font-family: "STJEDISE";
-    src: url("font/STJEDISE.TTF");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Design tokens: spacing, radii, container */
+:root{
+  --space-xxs:4px;
+  --space-xs:8px;
+  --space-sm:12px;
+  --space-md:20px;
+  --space-lg:32px;
+  --space-xl:48px;
+  --radius:12px;
+  --container-max:1100px;
 }
 
-body {
-    background-image: url("../img/background.png");
+/* Modern global styles */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:#f6f8fb;
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-header {
-    width: 100%;
-    height: 100%;
+
+.container{max-width:var(--container-max);margin:0 auto;padding:var(--space-lg)}
+
+/* Header / Navigation */
+.site-header{background:transparent;padding:var(--space-sm) 0}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.site-header h1{font-size:20px;margin:0;color:#0f172a;font-weight:700;letter-spacing:0.4px}
+.site-header nav ul{display:flex;gap:12px;list-style:none;margin:0;padding:0}
+.site-header nav a{color:#334155;text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600}
+.site-header nav a:hover{background:#f1f5f9}
+
+/* Hero */
+.hero{background:#ffffff;border-radius:var(--radius);padding:var(--space-xl);margin-block:var(--space-md);box-shadow:0 14px 36px rgba(2,6,23,0.06)}
+.hero .container{display:flex;flex-direction:column;gap:var(--space-sm)}
+.hero h2{margin:0 0 calc(var(--space-xs));font-size:2rem}
+.hero p{color:#475569;line-height:1.7;font-size:1.02rem}
+.cta{margin-top:var(--space-sm)}
+.btn{display:inline-block;padding:var(--space-sm) var(--space-md);border-radius:calc(var(--radius) - 2px);background:#0ea5a4;color:#fff;text-decoration:none;font-weight:700;margin-right:10px;box-shadow:0 6px 20px rgba(14,165,164,0.12)}
+.btn.secondary{background:transparent;color:#0f172a;border:1px solid rgba(15,23,42,0.06)}
+
+/* Content */
+main{padding-bottom:var(--space-lg)}
+h1,h2,h3{margin:0 0 calc(var(--space-sm)) 0}
+h2{font-size:1.6rem}
+p{margin:0 0 calc(var(--space-sm)) 0}
+
+/* helpers */
+.lead{font-size:1.03rem;color:#475569}
+.muted{color:#6b7280}
+
+/* focus and transitions */
+.btn, .site-header nav a{transition:all .18s ease}
+.btn:focus{outline:3px solid rgba(14,165,164,0.18);outline-offset:3px}
+a:focus{outline:3px solid rgba(125,211,252,0.18);outline-offset:3px}
+
+/* Footer */
+.site-footer{background:#0f172a;color:#f8fafc;padding:var(--space-md);text-align:center;border-radius:8px;margin-top:var(--space-lg)}
+.site-footer a{color:#7dd3fc;text-decoration:underline}
+
+/* Preview box for template demos (used on pages/sites.html) */
+#preview{display:none}
+
+/* Preview grid for templates (horizontal thumbnails) */
+.preview-grid{display:flex;gap:var(--space-md);align-items:flex-start;flex-wrap:wrap;margin-top:var(--space-md)}
+.preview-item{flex:1 1 300px;max-width:340px;display:flex;flex-direction:column;align-items:center}
+.preview-frame-wrap{width:320px;height:180px;background:#fff;border-radius:10px;overflow:hidden;border:1px solid rgba(16,24,40,0.04);box-shadow:0 8px 30px rgba(2,6,23,0.04)}
+.preview-frame-wrap iframe{width:1600px;height:900px;border:0;transform:scale(0.2);transform-origin:top left;pointer-events:none}
+.preview-label{margin-top:8px;font-weight:700;color:var(--text);background:transparent;padding:6px 10px;border-radius:6px}
+.preview-link{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit}
+.preview-link:focus{outline:3px solid rgba(125,211,252,0.18);outline-offset:4px;border-radius:8px}
+.preview-item:hover .preview-frame-wrap{transform:translateY(-6px);box-shadow:0 16px 40px rgba(2,6,23,0.08)}
+.preview-frame-wrap{transition:transform .18s ease,box-shadow .18s ease;cursor:pointer}
+
+@media(max-width:900px){
+  .preview-grid{justify-content:center}
+  .preview-item{max-width:260px}
+  .preview-frame-wrap{width:260px;height:150px}
+  .preview-frame-wrap iframe{transform:scale(0.16)}
 }
 
-header h1 {
-    text-align: center;
-    font-family: STJEDISE;
-    color: #f9fd00;
-    font-size: 50px;
+/* Responsive tweaks */
+@media(max-width:700px){
+  .site-header .container{flex-direction:column;align-items:flex-start}
+  .hero{padding:20px}
 }
 
-header>nav>ul {
-    border: 2px solid rgb(97, 10, 228);
-    background-color: rgb(159, 113, 236);
-    padding: 50px;
-    text-align: center;
+/* Small helper */
+.muted{color:#6b7280}
+
+/* Contact form styles */
+.form-card{max-width:760px;margin:var(--space-md) 0;padding:var(--space-md);}
+.form-grid{display:grid;gap:var(--space-sm)}
+.form-group{display:flex;flex-direction:column;margin-bottom:var(--space-sm)}
+.form-group label{font-weight:600;margin-bottom:6px;color:#0f172a}
+input[type="text"],input[type="email"],textarea{padding:12px;border-radius:10px;border:1px solid rgba(16,24,40,0.06);background:#fff;color:#0f172a}
+textarea{min-height:140px;resize:vertical}
+input[type="text"]:focus,input[type="email"]:focus,textarea:focus{outline:3px solid rgba(14,165,164,0.12);border-color:rgba(14,165,164,0.18)}
+.form-actions{margin-top:var(--space-sm);display:flex;gap:12px;align-items:center}
+.form-note{font-size:0.9rem;color:var(--cv-muted)}
+
+/* Emphasized submit button */
+.btn.primary{background:linear-gradient(90deg,#06b6d4,#0ea5a4);color:#fff;border:none;padding:calc(var(--space-sm) + 2px) var(--space-lg);box-shadow:0 10px 28px rgba(14,165,164,0.18);border-radius:10px;font-weight:800}
+.btn.primary::before{content:"✉️";margin-right:8px;display:inline-block}
+.btn.primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 18px 44px rgba(14,165,164,0.20)}
+.btn.primary:active{transform:translateY(-1px) scale(0.995)}
+.btn.primary:focus{outline:3px solid rgba(14,165,164,0.22);outline-offset:4px}
+.btn.primary[disabled]{opacity:0.6;cursor:not-allowed;box-shadow:none}
+
+/* --- CV specific styles merged here --- */
+:root{
+  --cv-bg:#ffffff;
+  --cv-text:#1f2937;
+  --cv-muted:#6b7280;
+  --cv-accent:#0ea5a4; /* teal */
+  --cv-accent-2:#2563eb; /* blue */
+  --cv-surface:#f8fafc;
+  --cv-radius:10px;
 }
 
-header>nav>ul>li {
-    /* border: 2px solid red; */
-    display: inline;
-    margin: 30px;
-    padding: 15px;
-    font-size: 25px
+/* CV base */
+/* keep existing body rules global, specific CV grid below */
+.cv-container{max-width:1000px;margin:0 auto;padding:24px}
+
+/* CV layout */
+#cv-config{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:900px){#cv-config{grid-template-columns:2fr 1fr}}
+
+.card{
+  background:var(--cv-surface);
+  border-radius:var(--cv-radius);
+  padding:16px;
+  border:1px solid rgba(2,6,23,0.04);
+  box-shadow:0 8px 28px rgba(2,6,23,0.06);
+  transition:transform .18s ease,box-shadow .18s ease;
 }
 
-header li>a {
-    text-decoration: none;
-    color: white;
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(2,6,23,0.10)}
 
+.parcours-item, .compet-item, .lang-item, .inter-item{
+  margin-bottom:12px;
+  padding:12px;
+  border-radius:8px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(248,250,252,0.6));
+  border:1px solid rgba(16,24,40,0.03);
+  box-shadow:0 6px 18px rgba(2,6,23,0.04);
+  transition:transform .15s ease,box-shadow .15s ease;
 }
 
-main {
-    background-color: gray;
-    opacity: 80%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    border: 2px solid gray;
-    border-radius: 25px;
-}
+.parcours-item:hover, .compet-item:hover, .lang-item:hover, .inter-item:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(2,6,23,0.06)}
 
-main h1 {
-    color: rgb(207, 26, 26);
-    font-size: 45px;
-    text-align: center;
-    margin-top: 20px;
-}
+.parcours-item{border-left:6px solid var(--cv-accent-2)}
+.parcours-item h3{margin:0;font-size:1.05rem;color:var(--cv-accent-2)}
+.parcours-item p{margin:6px 0;color:var(--cv-muted);font-size:0.95rem}
 
-main h2 {
-    margin-left: 10px;
-    font-size: 25px;
-}
+.compet-item{border-left:6px solid #ef4444}
+.compet-item h3{margin:0;font-size:1.05rem;color:#ef4444}
+.compet-item p{margin:6px 0;color:var(--cv-muted)}
 
-main h3 {
-    margin-left: 20px;
-    font-size: 20px;
-}
+.lang-item{border-left:6px solid #10b981}
+.lang-item h3{margin:0;font-size:1.05rem;color:#065f46}
+.lang-item p{margin:6px 0;color:var(--cv-muted)}
 
-main p {
-    margin: 30px;
-    font-size: 18px;
-}
+.inter-item{border-left:6px solid #8b5cf6}
+.inter-item h3{margin:0;font-size:1.05rem;color:#6d28d9}
+.inter-item p{margin:6px 0;color:var(--cv-muted)}
 
-main section ul li {
-    display: inline-block;
-    list-style: none;
-}
+/* headings for CV */
+h1.cv-title,h2.cv-section,h3.cv-sub{color:var(--cv-text);margin:0 0 12px 0}
+h2.cv-section{font-size:1.4rem}
+h3.cv-sub{font-size:1.05rem}
 
-figure {
-    opacity: 100%;
-}
+/* CV spacing tweaks: add space above section headings and between cards */
+h2.cv-section{margin-top:var(--space-md);margin-bottom:var(--space-sm)}
+.card{margin-bottom:var(--space-md)}
 
-figure figcaption {
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    border: 3px solid white;
-    border-radius: 10px;
-    background-color: white;
-    color: black;
-}
+/* small adjustments for CV links and lists */
+#cv-config a{color:var(--cv-accent-2);text-decoration:none}
+#cv-config ul{padding-left:1rem}
 
-footer {
-    background-color: black;
-    padding-top: 10px;
-    margin: 20px;
-    font-family: STJEDISE;
-    font-size: 15px;
-    text-align: center;
-    border-radius: 10%;
-    color: #f9fd00;
-    text-decoration: none;
-}
+.muted{color:var(--cv-muted);font-size:0.95rem}
 
-footer a {
-    color: #f9fd00
-}
+/* Accessibility: focus states for CV */
+#cv-config a:focus, #cv-config button:focus{outline:3px solid color-mix(in srgb, var(--cv-accent) 20%, transparent);outline-offset:2px}
+
+/* Footer spacing when previewing CV */
+#cv-config footer{margin-top:24px;padding:12px;text-align:center;color:var(--cv-muted)}
