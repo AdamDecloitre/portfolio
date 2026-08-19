@@ -26,7 +26,7 @@ body{background:var(--mod-bg);color:var(--mod-text)}
 
 footer.site-footer{background:transparent;padding:var(--space-sm) 0;color:var(--mod-muted)}
 
-@media(max-width:700px){.site-header .container{flex-direction:column;align-items:flex-start}}
+@media(max-width:700px){.site-header .container{flex-direction:row;align-items:center;flex-wrap:wrap}.site-header h1{flex:1 1 auto;margin-bottom:0}}
 
 /* features and projects */
 .features-grid{display:flex;gap:var(--space-sm);margin-top:var(--space-sm)}
