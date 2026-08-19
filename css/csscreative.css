@@ -31,3 +31,8 @@ footer.site-footer{background:transparent;padding:var(--space-sm) 0;color:var(--
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-sm)}
 .gallery img{width:100%;border-radius:10px;display:block}
 .section{margin-block:var(--space-lg)}
+
+@media(max-width:700px){
+	.projects-grid, .gallery{grid-template-columns:1fr}
+	.project-card{padding:var(--space-sm)}
+}

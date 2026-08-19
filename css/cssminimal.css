@@ -40,3 +40,8 @@ a{color:var(--min-accent)}
 .contact{margin-top:var(--space-md)}
 @media(max-width:900px){.projects-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.projects-grid{grid-template-columns:1fr}}
+
+@media(max-width:700px){
+	.hero-section{padding:var(--space-md)}
+	.project-card{padding:var(--space-sm)}
+}

@@ -35,3 +35,10 @@ footer.site-footer{background:transparent;padding:var(--space-sm) 0;color:var(--
 .project-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:var(--space-md);border-radius:12px;border:1px solid rgba(255,255,255,0.03);transition:transform .18s ease,box-shadow .18s ease}
 .project-card:hover{transform:translateY(-8px);box-shadow:0 16px 40px rgba(2,6,23,0.45)}
 @media(max-width:900px){.projects-grid{grid-template-columns:1fr}}
+
+@media(max-width:700px){
+	.hero-section{padding:var(--space-md)}
+	.features-grid{display:grid;grid-template-columns:1fr;gap:var(--space-xs)}
+	.feature{min-width:0}
+	.project-card{padding:var(--space-sm)}
+}
